@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Guardian AI Agent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup-container">
+        <header class="popup-header">
+            <img src="icons/logo.png" alt="Privacy Guardian" class="logo">
+            <h1>Privacy Guardian</h1>
+        </header>
+        
+        <main class="popup-content">
+            <section class="privacy-score-section">
+                <div class="score-circle">
+                    <svg viewBox="0 0 36 36" class="score-chart">
+                        <path class="score-circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path id="score-circle-fill"
+                            class="score-circle-fill"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <div class="score-value" id="privacy-score">0</div>
+                </div>
+                <div class="score-label">Privacy Score</div>
+            </section>
+
+            <section class="actions-section">
+                <button class="action-button" id="deletion-request">
+                    <span class="icon">✉️</span>
+                    Request Data Deletion
+                </button>
+                
+                <button class="action-button" id="cookie-settings">
+                    <span class="icon">🍪</span>
+                    Manage Cookies
+                </button>
+            </section>
+
+            <section class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Trackers Found</span>
+                    <span class="stat-value" id="trackers-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Cookies</span>
+                    <span class="stat-value" id="cookies-count">0</span>
+                </div>
+            </section>
+
+            <div class="separator"></div>
+
+            <button class="full-website-button" id="visit-website">
+                Visit Full Dashboard
+                <span class="arrow">→</span>
+            </button>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
